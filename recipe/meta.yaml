@@ -10,23 +10,23 @@ source:
   sha256: 3a682280aa2150737df494e862e73a16730249a511705efb1426cd379f23f397
 
 build:
-  number: 1
+  number: 2
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3
     - pip
     - pytest-runner
   run:
-    - python
+    - python >=3
     - decorator
     - future
     - google-auth
     - google-auth-oauthlib
     - gspread >=3.0.0
     - pandas >=0.20.0
-    - pathlib2  # [py27]
 
 test:
   imports:
