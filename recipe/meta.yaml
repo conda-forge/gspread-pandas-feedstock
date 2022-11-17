@@ -1,5 +1,5 @@
 {% set name = "gspread-pandas" %}
-{% set version = "2.2.3" %}
+{% set version = "3.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3a682280aa2150737df494e862e73a16730249a511705efb1426cd379f23f397
+  sha256: 72371ff295411f24acbed85026abbd0641c098f5c62c8454147feed71ec4850e
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
