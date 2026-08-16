@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 4db9e901ac3c91535b2b7226015799ffce0a24fdde77a53251d83128af83c48b
 
 build:
@@ -17,6 +17,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
+    - setuptools
     - pytest-runner
     - pip
   run:
@@ -33,6 +34,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
 
